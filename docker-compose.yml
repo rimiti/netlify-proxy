@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  website.com:
+    container_name: website.com
+    image: nginx
+    ports:
+    - 8080:8080
+    expose:
+    - 8080
+    volumes:
+    - ./nginx/website.conf:/etc/nginx/conf.d/website.conf
+
